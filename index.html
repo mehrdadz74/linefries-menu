@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LINE FRIES MENU</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+
+body{
+margin:0;
+font-family:'Vazirmatn',sans-serif;
+background:linear-gradient(180deg,#071a3a,#0c2a55);
+color:white;
+}
+
+header{
+text-align:center;
+padding:28px 15px 10px;
+font-size:30px;
+font-weight:800;
+letter-spacing:2px;
+}
+
+.subtitle{
+text-align:center;
+opacity:0.7;
+margin-bottom:20px;
+font-size:13px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+padding:15px;
+}
+
+.card{
+background:#132c5a;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.03);
+}
+
+.card img{
+width:100%;
+height:120px;
+object-fit:cover;
+}
+
+.card h3{
+margin:8px 10px 0;
+font-size:15px;
+}
+
+.card p{
+margin:4px 10px 12px;
+font-size:12px;
+opacity:0.7;
+}
+
+.tag{
+font-size:11px;
+background:#ffcc00;
+color:#000;
+display:inline-block;
+padding:3px 8px;
+border-radius:10px;
+margin:8px 10px 0;
+}
+
+.qr{
+margin:30px auto;
+text-align:center;
+background:#132c5a;
+padding:20px;
+border-radius:20px;
+width:88%;
+}
+
+footer{
+text-align:center;
+font-size:12px;
+opacity:0.6;
+margin:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>🍟 LINE FRIES</header>
+<div class="subtitle">Loaded Fries Specialty Menu</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606755962773-d324e2c5fbc8"/>
+<div class="tag">NEW</div>
+<h3>Fries + Burger Topping</h3>
+<p>سیب‌زمینی با تاپینگ برگر</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1617196035154-1e7a3b8d3b8f"/>
+<div class="tag">HOT</div>
+<h3>Fries + Hotdog Topping</h3>
+<p>سیب‌زمینی با تاپینگ هات‌داگ</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606757389940-2d3c1f1c7b4c"/>
+<div class="tag">PREMIUM</div>
+<h3>Fries + Steak Topping</h3>
+<p>سیب‌زمینی با تاپینگ استیک</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604908177522-040a8fde462f"/>
+<div class="tag">CHEF</div>
+<h3>Fries + Mac & Cheese</h3>
+<p>سیب‌زمینی با مک‌اندچیز</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1625944525533-473f1f6f2d2b"/>
+<div class="tag">CRISPY</div>
+<h3>Fries + Fried Chicken</h3>
+<p>سیب‌زمینی با مرغ سوخاری</p>
+</div>
+
+</div>
+
+<div class="qr">
+<h3>📱 Scan to Open Menu</h3>
+<div id="qrcode"></div>
+</div>
+
+<footer>LINE FRIES © 2026</footer>
+
+<script>
+const url = window.location.href;
+
+new QRCode(document.getElementById("qrcode"), {
+text: url,
+width:160,
+height:160
+});
+</script>
+
+</body>
+</html>
